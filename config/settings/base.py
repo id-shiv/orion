@@ -8,28 +8,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(DEBUG=(bool, False))
 environ.Env.read_env(env_file=".env")
 
-SECRET_KEY = env("SECRET_KEY")
-
-# Set the app DEBUG level
-DEBUG = env("DEBUG")
-
 # Set the hosts that can communicate with this web server
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
 
 # Application definitions
-INSTALLED_APPS = [
-    # Built-in
+BUILTIN_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Third-party
-
-    # local
 ]
 
 MIDDLEWARE = [
@@ -63,16 +53,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -90,7 +70,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
