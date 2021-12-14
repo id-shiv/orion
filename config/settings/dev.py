@@ -10,7 +10,7 @@ BUILTIN_APPS += []
 
 THIRDPARTY_APPS = ['rest_framework']
 
-LOCAL_APPS = ["apps.users"]
+LOCAL_APPS = ["apps.users", "apps.common"]
 
 INSTALLED_APPS = BUILTIN_APPS + THIRDPARTY_APPS + LOCAL_APPS
 
