@@ -13,7 +13,7 @@ DEBUG = env("DEBUG")
 # Apps
 BUILTIN_APPS += []
 
-THIRDPARTY_APPS = ['rest_framework']
+THIRDPARTY_APPS = ["rest_framework"]
 
 LOCAL_APPS = ["apps.users", "apps.common"]
 
@@ -92,7 +92,7 @@ logging.config.dictConfig(
                 "level": "DEBUG",
                 "class": "logging.FileHandler",
                 "formatter": "file",
-                "filename": "blog-debug.log",
+                "filename": "orion-debug.log",
             },
             "django.server": DEFAULT_LOGGING["handlers"]["django.server"],
         },
