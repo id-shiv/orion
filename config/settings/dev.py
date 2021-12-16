@@ -44,9 +44,9 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 
-LOGIN_URL = "http://localhost:8080/api/v1/login"
+LOGIN_URL = "http://localhost/api/v1/login"
 ACCOUNT_ADAPTER = "apps.users.adapter.CustomDefaultAccountAdapter"
-ACTIVATE_EMAIL_URL = "http://localhost:8080"
+ACTIVATE_EMAIL_URL = "http://localhost"
 
 #  Email Backend Config
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
