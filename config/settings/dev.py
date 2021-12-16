@@ -13,9 +13,17 @@ DEBUG = env("DEBUG")
 # Apps
 BUILTIN_APPS += []
 
-THIRDPARTY_APPS = ["rest_framework"]
+THIRDPARTY_APPS = [
+    "rest_framework",
+    "rest_framework.authtoken",
+    "allauth",
+    "allauth.account",
+    "dj_rest_auth",
+    "dj_rest_auth.registration",
+    "rest_framework_simplejwt.token_blacklist",
+]
 
-LOCAL_APPS = ["apps.users", "apps.common"]
+LOCAL_APPS = ["apps.users", "apps.common", "apps.profiles"]
 
 INSTALLED_APPS = BUILTIN_APPS + THIRDPARTY_APPS + LOCAL_APPS
 
@@ -44,9 +52,9 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 
-LOGIN_URL = "http://localhost/api/v1/login"
+LOGIN_URL = "http://localhost:8080/api/v1/login"
 ACCOUNT_ADAPTER = "apps.users.adapter.CustomDefaultAccountAdapter"
-ACTIVATE_EMAIL_URL = "http://localhost"
+ACTIVATE_EMAIL_URL = "http://localhost:8080"
 
 #  Email Backend Config
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
