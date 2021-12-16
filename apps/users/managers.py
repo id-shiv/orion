@@ -17,7 +17,8 @@ class CustomUserManager(BaseUserManager):
         """Create and save a user with email-password combi"""
 
         # Set the username from e-mail
-        username = email.split("@")[0]
+        if email:
+            username = email.split("@")[0]
 
         if email:
             email = self.normalize_email(email)
